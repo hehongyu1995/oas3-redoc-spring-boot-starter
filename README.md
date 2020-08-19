@@ -103,7 +103,7 @@ class OAS3Config {
     @Bean
     fun customOpenApiCustomizer(): OpenApiCustomiser{
         return OpenApiCustomiser {
-            // 添加Server配置
+            // 添加Servers配置
             configureApiServers(it, "oas-document/servers.json")
             // 添加文档介绍
             configureApiDescription(it, "oas-document/api-description.md")
@@ -145,6 +145,40 @@ configureApiDescription|配置文档的描述，支持读取`resources`目录下
         )
 )
 ```
+
+#### 使用Mardown自定义文档的描述
+
+OAS3的文档定义中，提供了`description`字段，可供我们在里面填写API和应用的介绍、API调用说明等。如果利用注解的话，我们将只能写入一些简单的介绍。因此，我在Starter中加入了一个可以在最终文档中插入自定义Markdown的解决方案：
+
+在项目的`src/main/resources`目录下，放置自己的markdown，以example的目录结构为例：
+
+[![d1xBUH.md.png](https://s1.ax1x.com/2020/08/19/d1xBUH.md.png)](https://imgchr.com/i/d1xBUH)
+
+其中，`api-description`为主文件，内容为：
+
+```
+@oas-document/introduction.md@
+
+@oas-document/FAQ.md@
+```
+
+对OpenAPI进行配置：
+
+```kotlin
+@Configuration
+class OAS3Config {
+    @Bean
+    fun customOpenApiCustomizer(): OpenApiCustomiser{
+        return OpenApiCustomiser {
+            // 添加文档介绍，oas-document/api-description.md为主文件
+            configureApiDescription(it, "oas-document/api-description.md")
+        }
+    }
+}
+```
+
+运行时，`api-description`的内容将作为API文档的description字段。并且，如果其中有以`@{filePath}@`格式定义的占位符，将被替换为`src/main/resources`下对应文件的内容。
+
 
 ### 启动Spring Boot应用
 
