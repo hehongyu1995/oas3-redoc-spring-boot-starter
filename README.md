@@ -21,6 +21,12 @@ gradlew :example-api:bootRun
 
 ### 引入Starter
 
+引入依赖前，请将以下私服加入项目的仓库配置中：
+
+```
+https://hehongyu1995.github.io/maven-repo/maven-releases/
+```
+
 - Maven
 
 ```xml
