@@ -9,7 +9,7 @@
 
 [![d1TiWD.md.png](https://s1.ax1x.com/2020/08/19/d1TiWD.md.png)](https://imgchr.com/i/d1TiWD)
 
-我将解决方案封装为了`spring-boot-starter`，只需要引入现有的Spring Boot MVC应用中，立刻就可以为应用加入ReDoc和Swagger-UI文档~
+为了方便大家使用，我将解决方案封装为了`spring-boot-starter`，只需要引入现有的Spring Boot MVC应用中，立刻就可以为应用加入ReDoc和Swagger-UI文档~
 
 项目已经开源到了GitHub: https://github.com/hehongyu1995/oas3-redoc-spring-boot-starter
 

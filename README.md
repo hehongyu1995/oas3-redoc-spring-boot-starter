@@ -1,6 +1,6 @@
 # oas3-redoc-spring-boot-starter
 
-本Starter集成[OAS3(Open API 3.0)](https://swagger.io/specification/) 和[Redoc](https://github.com/Redocly/redoc) ，为Spring Boot MVC应用提供开箱即用的文档集成。
+本Starter集成[OAS3(Open API Specification 3.0)](https://swagger.io/specification/) 和[Redoc](https://github.com/Redocly/redoc) ，为Spring Boot MVC应用提供开箱即用的文档集成。
 
 如果本项目对你有帮助，欢迎给我加星关注~
 
