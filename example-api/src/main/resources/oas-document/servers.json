@@ -1,0 +1,10 @@
+[
+  {
+    "url": "http://localhost:8080",
+    "description": "本地开发环境"
+  },
+  {
+    "url": "http://192.168.0.0:8080",
+    "description": "生产环境"
+  }
+]
