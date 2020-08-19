@@ -1,23 +1,23 @@
-# oas3-redoc-spring-boot-starter
+# Spring MVC应用的最佳API文档解决方案：OAS3+ReDoc
 
-本Starter集成[OAS3(Open API 3.0)](https://swagger.io/specification/) 和[Redoc](https://github.com/Redocly/redoc) ，为Spring Boot MVC应用提供开箱即用的文档集成。
+作为一个经常要提供给API文档给内部和第三方的阅读的“苦程”，我一直在寻找一个完美的Spring MVC文档解决方案。过去，我一直使用的是`springfox-swagger2`依赖，使用`swagger2`注解，对代码进行注释，生成swagger文档。
+不过，现在是2020年了，*Swagger2*早已过时啦，`springfox-swagger2`也已停止维护。Swagger2.0的继任者是`OpenApi 3.0`(OAS3)规范，并照旧提供了供Spring MVC使用的注解。OAS3各种炫酷的新特性，各位同学可以上官网查看。这里，我向大家分享一个自己的文档解决方案。使用[OAS3](https://swagger.io/specification/) + [ReDoc](https://github.com/Redocly/redoc) ，轻轻松松就能为已有的Spring Boot应用生成精美的API文档，并且可以加入自定义的Markdown文档。
 
-如果本项目对你有帮助，欢迎给我加星关注~
+先来看看最终生成的文档效果吧：
 
-[![d1TiWD.th.png](https://s1.ax1x.com/2020/08/19/d1TiWD.th.png)](https://imgchr.com/i/d1TiWD)
+[![d39gYQ.md.png](https://s1.ax1x.com/2020/08/19/d39gYQ.md.png)](https://imgchr.com/i/d39gYQ)
 
-## 运行示例API
+[![d1TiWD.md.png](https://s1.ax1x.com/2020/08/19/d1TiWD.md.png)](https://imgchr.com/i/d1TiWD)
 
-```
-gradlew :example-api:bootRun
-```
+我将解决方案封装为了`spring-boot-starter`，只需要引入现有的Spring Boot MVC应用中，立刻就可以为应用加入ReDoc和Swagger-UI文档~
 
-文档地址：
+项目已经开源到了GitHub: https://github.com/hehongyu1995/oas3-redoc-spring-boot-starter
 
-- *Redoc*: http://localhost:8080/doc
-- *Swagger-UI*：http://localhost:8080/swagger-ui.html
+如果你喜欢这个项目，欢迎给它加星~
 
-## 快速开始
+下面是该starter的使用说明：
+
+## oas3-redoc-spring-boot-starter
 
 ### 引入Starter
 
@@ -51,7 +51,7 @@ OAS3可用的全部注解，请参考官方文档：[Quick Annotation Overview](
 
 #### 为Controller添加文档注解
 
-使用OAS3注解标记Controller的方法和参数，以Kotlin代码为例：
+使用OAS3注解标记Controller的方法和参数，以下以Kotlin代码为例：
 
 ```kotlin
 @RestController
@@ -207,9 +207,4 @@ class OAS3Config {
 - Swagger-UI文档：
 
 [![d17Uud.md.png](https://s1.ax1x.com/2020/08/19/d17Uud.md.png)](https://imgchr.com/i/d17Uud)
-
-
-
-
-
 
