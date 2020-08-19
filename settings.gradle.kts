@@ -8,3 +8,4 @@ pluginManagement{
 rootProject.name = "oas3-redoc-spring-boot-starter"
 include(":oas3-redoc-spring-boot-starter")
 include(":example-api")
+project(":oas3-redoc-spring-boot-starter").projectDir = file("spring-boot-starter")
